@@ -1,4 +1,6 @@
-# Welcome to DaanMatch Resource Colection
+# Welcome to DaanMatch Resource Collection
+
+Welcome to DaanMatch! We are thrilled to have you join our team. You are joining a company that values hard work, creativity, and a commitment to excellence. We understand that you are eager to learn and grow, and we are excited to provide you with the opportunity to do so. You will have the chance to work with experienced professionals, gain hands-on experience, and contribute to meaningful projects. We are looking forward to your ideas and insights. This program will be a valuable experience for you, and we are excited to see you thrive during your time here at DaanMatch.
 
 :::{admonition} Procedures
 :class: attention

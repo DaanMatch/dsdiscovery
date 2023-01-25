@@ -1,6 +1,8 @@
 # DS Discovery
 
-DS Discovery Resource Collection
+DS Discovery Resource Collection. Click on the badge to be directed to the page.
+
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)]( https://daanmatch.github.io/dsdiscovery/)
 
 ## Usage
 
