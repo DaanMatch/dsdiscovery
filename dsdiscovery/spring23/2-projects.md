@@ -1,6 +1,39 @@
 # Project List
 
-## Web-scraping and automating with GitHub actions
+To understand the projects we're going to do and choose the one you're interested in, you should first take a look at this webpage. Information is subject to amendments over the semester.
+
+## Web Scraping Indian NGOs Information using GitHub Actions
+
+**Project Description:**
+
+The goal of this project is to create a comprehensive database of Indian NGOs by extracting information from various websites and sources, and automate the web scraping workflow using GitHub Actions. This information will include registration details, contact information, funding sources, and other relevant data. The project will use web scraping techniques and libraries such as Scrapy or Beautiful Soup to extract the data.
+
+**Tasks:**
+
+- Research and identify relevant websites and sources of information for Indian NGOs
+- Develop web scraping scripts using Python and web scraping libraries such as Scrapy or Beautiful Soup
+- Extract data from websites including registration details, contact information, funding sources and other relevant data
+- Clean and process the data, removing duplicates and formatting it in a structured format.
+- Store the data in a database such as PostgreSQL
+- Create visualizations and reports to understand the data and insights
+- Automate the web scraping workflow using [GitHub actions](https://www.swyx.io/github-scraping), which will run the web scraping scripts, process and save the data, and update the database.
+
+**Technologies:**
+
+- Python
+- Web scraping libraries (Scrapy, Beautiful Soup)
+- SQL
+- PostgreSQL or other database management systems
+- GitHub Actions
+
+**Expected Outcomes:**
+
+- A comprehensive database of Indian NGOs that includes registration details, contact information, funding sources and other relevant data
+- Data visualization and reports that provide insights into the Indian NGO sector.
+- A library of web scraping scripts that can be used for future data collection and updates
+- A fully automated web scraping workflow using GitHub Actions, that will allow for regular updates and maintenance of the database.
+
+Note: The project description is a general guidance, and the specific tasks, technologies and outcomes may vary depending on the scope of the project and the data availability. Additionally, web scraping can be against the website's term of service, it's important to check the website's policy and also use the scraping tools in a responsible way.
 
 When learning Python web scraping, you will gain knowledge and skills in the following areas:
 
@@ -22,9 +55,33 @@ Both libraries are free and open-source, and have an active community that provi
 It's worth noting that web scraping can be against the website's term of service and can also cause issues on the website's performance, it's important to check the website's policy and also use the scraping tools in a responsible way.
 ```
 
-[Automating with GitHub actions](https://www.swyx.io/github-scraping)
+## Indian NGOs Registration Document Library and Categorization
 
-## Registration Documentation Library
+**Project Description:**
+
+The goal of this project is to create a comprehensive library of all the registration documents that an NGO in India needs. The project will involve researching and identifying all the registration documents required for an NGO to operate in India and then creating a library that is easily accessible for anyone interested in setting up an NGO.
+
+**Tasks:**
+
+- Research and identify all the registration documents required for an NGO to operate in India
+- Gather information on registration process, required documents, and any other relevant details
+- Create a user-friendly interface for searching and accessing the library
+
+**Technologies:**
+
+- Python
+- Web scraping libraries (Scrapy, Beautiful Soup)
+- SQL
+- PostgreSQL or other database management systems
+
+**Expected Outcomes:**
+
+- A comprehensive library of all the registration documents required for an NGO to operate in India
+- A user-friendly interface for searching and accessing the library
+- Data visualization and reports that provide insights into the Indian NGO sector
+- Continuously updated library with new information and changes in the regulations
+
+Note: The project description is a general guidance, and the specific tasks, technologies and outcomes may vary depending on the scope of the project and the data availability. Additionally, web scraping can be against the website's term of service, it's important to check the website's policy and also use the scraping tools in a responsible way.
 
 NGOs in India are required to register with different government agencies depending on their type and activities. The registration documents needed will vary depending on the specific NGO and the agency with which it is registering. However, here are some of the types of registration documents that are commonly needed for NGOs in India:
 
