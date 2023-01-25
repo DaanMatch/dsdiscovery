@@ -2,10 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-
+root: spring23/1-intro.md
 parts:
   - caption: Spring 2023
+    chapters:
+    - file: spring23/1-intro.md
+      title: Introduction
   - caption: Spring 2022
     chapters:
     - file: spring22/1-intro-spring2022.md
