@@ -22,4 +22,4 @@ Both libraries are free and open-source, and have an active community that provi
 It's worth noting that web scraping can be against the website's term of service and can also cause issues on the website's performance, it's important to check the website's policy and also use the scraping tools in a responsible way.
 ```
 
-[Automating with GitHub actions](https://www.swyx.io/github-scraping))
+[Automating with GitHub actions](https://www.swyx.io/github-scraping)

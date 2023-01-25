@@ -60,12 +60,14 @@ In summary, pip is a package manager that allows you to install and manage Pytho
 ```
 
 ```{dropdown} Python Libraries
-NumPy: A library for efficient array computations and mathematical operations.
-Pandas: A library for data manipulation and analysis.
-Matplotlib and Seaborn: Libraries for data visualization.
-Scikit-learn: A library for machine learning tasks, including classification, regression, and clustering.
-TensorFlow and Keras: Libraries for building and training neural networks.
-Jupyter Notebook: An interactive environment for writing and running code, and creating visualizations.
+- NumPy: A library for efficient array computations and mathematical operations.
+- Pandas: A library for data manipulation and analysis.
+- Matplotlib and Seaborn: Libraries for data visualization.
+- Scikit-learn: A library for machine learning tasks, including classification, regression, and clustering.
+- TensorFlow and Keras: Libraries for building and training neural networks.
+- Jupyter Notebook: An interactive environment for writing and running code, and creating visualizations.
 ```
 
-TODO: Fill in this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
+## TODO
+
+ Fill in this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
