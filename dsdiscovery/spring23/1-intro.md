@@ -26,7 +26,7 @@ By adhering to these communication expectations, we can ensure that we are able 
 ## Leadership team and key contacts ℹ️
 
 ::::{grid}
-:gutter: 3
+:gutter: 
 
 :::{grid-item-card} Cara Foss Arellano
 Founder
