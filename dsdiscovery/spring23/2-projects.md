@@ -59,7 +59,7 @@ It's worth noting that web scraping can be against the website's term of service
 
 **Project Description:**
 
-The goal of this project is to create a comprehensive library of all the registration documents that an NGO in India needs. The project will involve researching and identifying all the registration documents required for an NGO to operate in India and then creating a library that is easily accessible for anyone interested in setting up an NGO.
+The goal of this project is to create a comprehensive library of all the registration documents that an NGO in India needs. The project will involve researching and identifying all the registration documents required for an NGO to operate in India. Additionally, the project will also involve collecting all versions of the same registration form, which can vary depending on the issuing state or time period.
 
 **Tasks:**
 
