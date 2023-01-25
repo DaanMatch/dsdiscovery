@@ -5,7 +5,7 @@ Welcome to DaanMatch! We are thrilled to have you join our team. You are joining
 :::{admonition} Communication
 :class: attention
 All meetings are hosted on Google Meets or Zoom. Default Timezone: PST.
-Written communications on Slack. Please review our [Code of Conduct](CONDUCT.md).
+Written communications on Slack. Please review our [Code of Conduct](CODE_OF_CONDUCT.md).
 :::
 
 ## Program Requirements
