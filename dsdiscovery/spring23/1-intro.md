@@ -68,4 +68,6 @@ In summary, pip is a package manager that allows you to install and manage Pytho
 - Jupyter Notebook: An interactive environment for writing and running code, and creating visualizations.
 ```
 
-TODO: Fill in this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
+## TODO
+
+ Fill in this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
