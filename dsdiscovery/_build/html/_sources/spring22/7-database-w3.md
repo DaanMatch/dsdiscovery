@@ -28,7 +28,7 @@ Get familiar with AWS RDS and MySQL.
 :::{figure-md} data-model2
 :class: myclass
 
-<img src="images/drawsql.png" alt="DaanMatch Data Model" class="bg-primary mb-1" width="600px">
+<img src="img/drawsql.png" alt="DaanMatch Data Model" class="bg-primary mb-1" width="600px">
 
 DaanMatch's Data Model visualized using DrawSQL. Last updated Feb 21 2022. <br>
 Changed id datatype from int to uuid. Redefined relationships. Added new field to reflect [most used social media platforms in India](https://www.theglobalstatistics.com/india-social-media-statistics/).
@@ -57,7 +57,7 @@ Will require domain knowledge of what each data field represents. Either web sea
 :::{figure-md} EER_diagram_daanmatch_ngo
 :class: myclass
 
-<img src="images/EER_diagram_daanmatch_ngo.png" alt="EER diagram of daanmatch_ngo" class="bg-primary mb-1">
+<img src="img/EER_diagram_daanmatch_ngo.png" alt="EER diagram of daanmatch_ngo" class="bg-primary mb-1">
 
 EER diagram of daanmatch_ngo on MySQL Workbench
 :::

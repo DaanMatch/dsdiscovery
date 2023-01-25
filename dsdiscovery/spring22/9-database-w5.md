@@ -14,7 +14,7 @@
 :::{figure-md} EER_diagram_daanmatch_datamodel
 :class: myclass
 
-<img src="images/daanmatch_datamodel.png" alt="EER diagram of datamodel" class="bg-primary mb-1">
+<img src="img/daanmatch_datamodel.png" alt="EER diagram of datamodel" class="bg-primary mb-1">
 
 EER diagram of daanmatch datamodel on MySQL Workbench
 :::

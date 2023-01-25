@@ -50,7 +50,7 @@ A database is information that is set up for easy access, management and updatin
 :::{figure-md} Data-Model
 :class: myclass
 
-<img src="images/drawsql.png" alt="DaanMatch Data Model" class="bg-primary mb-1" width="600px">
+<img src="img/drawsql.png" alt="DaanMatch Data Model" class="bg-primary mb-1" width="600px">
 
 DaanMatch's Data Model visualized using DrawSQL.
 :::
