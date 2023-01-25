@@ -5,7 +5,9 @@ Welcome to DaanMatch! We are thrilled to have you join our team. You are joining
 :::{admonition} Communication
 :class: attention
 All meetings are hosted on Google Meets or Zoom. Default Timezone: PST.
-Written communications on Slack.
+Written communications on Slack. Please turn notifications on.
+
+Let us know in 24hrs+ in advance if you cannot attend the meeting. Schedule is flexible around Midterms/Exams.
 :::
 
 ## Program Requirements
@@ -20,20 +22,21 @@ In order to receiving a passing grade:
 
 ## Leadership team and key contacts ℹ️
 
-```{panels}
-:card: border-2
-Cara Foss Arellano
-^^^
-cara.arellano@berkeley.edu\
-14083935646
----
-Kenneth Kron
-^^^
-kronsensei@gmail.com\
-16503880881
----
-Patrick Guo
-^^^
-guopatrick.comping@gmail.com\
-15107178380
-```
+::::{grid}
+:gutter: 3
+
+:::{grid-item-card} Cara Foss Arellano
+Founder
+cara.arellano@berkeley.edu
+:::
+
+:::{grid-item-card} Patrick Guo
+Data Officer
+guopatrick.comping@gmail.com
+:::
+
+:::{grid-item-card} Kenneth Kron
+Information Security + Backend Development
+kronsensei@gmail.com
+:::
+::::

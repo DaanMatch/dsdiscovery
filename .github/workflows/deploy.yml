@@ -29,12 +29,12 @@ jobs:
     #  Remove any existing builds
     - name: Clean the book
       run: |
-        jupyter-book clean ds_discovery
+        jupyter-book clean dsdiscovery
 
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build ds_discovery
+        jupyter-book build dsdiscovery
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
