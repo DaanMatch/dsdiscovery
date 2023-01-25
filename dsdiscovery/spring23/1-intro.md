@@ -24,14 +24,17 @@ In order to receiving a passing grade:
 :gutter: 3
 
 :::{grid-item-card} Patrick Guo
+Data Officer
 guopatrick.comping@gmail.com
 :::
 
 :::{grid-item-card} Cara Foss Arellano
+Founder
 cara.arellano@berkeley.edu
 :::
 
 :::{grid-item-card} Kenneth Kron
+Information Security + Backend Development
 kronsensei@gmail.com
 :::
 ::::
