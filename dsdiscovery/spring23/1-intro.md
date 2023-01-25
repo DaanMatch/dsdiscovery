@@ -44,10 +44,26 @@ kronsensei@gmail.com
 :::
 ::::
 
-## TODO
+## Development Environment
 
 - [ ] Share GitHub username
-- [ ] Set up local environment (virtual environment) and package managers (e.g. pip, anaconda etc.)
-- [ ] Install Jupyter Lab/Notebook
+- [ ] Set up local environment (virtual environment) and package managers (e.g. pip, anaconda etc.) or use Google Colab. Will not be able to use Berkeley's Jupyter Hub.
 
-## 
+```{dropdown} Package Managers
+Pip and Anaconda are both package managers for Python.
+
+Pip is the default package manager for Python. It is a command-line tool that allows you to install, update, and manage Python packages. With pip, you can install packages from the Python Package Index (PyPI), which is a repository of Python packages. You can install packages using the command "pip install package_name" and to upgrade packages "pip install --upgrade package_name".
+
+Anaconda is a distribution of Python that comes with a lot of pre-installed packages for data science and machine learning. It also includes conda, which is an additional package manager that allows you to easily install, update, and manage packages from different sources. It also contains Spyder, Jupyter Notebook, and other tools that are commonly used in data science and machine learning workflows. With Anaconda you can create isolated environments with specific versions of Python and packages, which is useful to avoid version conflicts.
+
+In summary, pip is a package manager that allows you to install and manage Python packages, while Anaconda is a distribution of Python that comes with a lot of pre-installed packages and additional tools for data science and machine learning, and also includes conda as a package manager.
+```
+
+```{dropdown} Python Libraries
+NumPy: A library for efficient array computations and mathematical operations.
+Pandas: A library for data manipulation and analysis.
+Matplotlib and Seaborn: Libraries for data visualization.
+Scikit-learn: A library for machine learning tasks, including classification, regression, and clustering.
+TensorFlow and Keras: Libraries for building and training neural networks.
+Jupyter Notebook: An interactive environment for writing and running code, and creating visualizations.
+```
