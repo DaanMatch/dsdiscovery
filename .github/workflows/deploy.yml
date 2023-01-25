@@ -26,6 +26,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    #  Remove any existing builds
+    - name: Clean the book
+      run: |
+        jupyter-book clean ds_discovery
+
     # Build the book
     - name: Build the book
       run: |
