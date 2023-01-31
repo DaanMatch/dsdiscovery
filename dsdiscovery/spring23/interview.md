@@ -13,3 +13,18 @@ A 30-minute interview structure for an internship program could include:
 ## Introduction to DaanMatch
 
 DaanMatch's purpose is to evaluate and assess the financial and organizational performance of non-profit organizations and charities, to help potential donors make informed decisions about where to allocate their resources. We aim to promote accountability, transparency, and efficiency in the NGO sector by providing independent, objective and reliable information about a NGO's operations, governance, finances and impact. This information can help donors make informed decisions about which NGO they wish to support, as well as help NGOs improve their operations and impact. For DaanMatch, our focus in NGOs in India.
+
+## Interview questions
+
+1. Tell us about your previous experience
+2. What spurred your interesting in applying to our program
+3. Why are you interested in data science
+4. Tell us about a project you're proud of and the challenges you faced during the process
+5. Can you describe your process for approaching a new project?
+6. How do you prioritize and manage multiple project and tasks?
+7. How do you approach collaboration and teamwork in your data analysis projects?
+
+## Interviews
+
+Tien
+Vishnu
