@@ -31,8 +31,9 @@ Vishnu - Interest in helping out at all aspects
 Tien
 Michael - Very poised, had follow up email
 
-Harish
 Connie
+Nathaniel Chen - Detail oriented
 
 Tejas
-Harish
+Wen Biao - Interest in maps
+Harish - Interest in working multiple semesters
