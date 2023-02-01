@@ -22,12 +22,17 @@ DaanMatch's purpose is to evaluate and assess the financial and organizational p
 4. Tell us about a project you're proud of and the challenges you faced during the process
 5. Can you describe your process for approaching a new project?
 6. How do you prioritize and manage multiple project and tasks?
-7. How do you approach collaboration and teamwork in your data analysis projects?
+7. How do you approach collaboration and teamwork in your projects?
+8. Can you give an example of a conflict you had to resolve and how you approached it?
 
 ## Interviews
 
-Vishnu
+Vishnu - Interest in helping out at all aspects
 Tien
+Michael - Very poised, had follow up email
 
-Michael
+Harish
+Connie
+
 Tejas
+Harish
