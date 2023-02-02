@@ -69,5 +69,7 @@ In summary, pip is a package manager that allows you to install and manage Pytho
 ```
 
 ## TODO
-- Complete [Spring 2023 Data Discovery Student Information Survey](https://berkeley-edu-dot-canvas-spark-374913.uc.r.appspot.com/?c=1OTP58gM7pVFikcrhTtIIpgxMGQUZrO4DcI8aOT3gDaU&q=0&r=185cc5b11606fef3&z=1674170798455&o=https%3A%2F%2Fforms.gle%2FgbWdudDjekEW553h7)
+
+- Complete by 2/5 [Spring 2023 Data Discovery Student Information Survey](https://berkeley-edu-dot-canvas-spark-374913.uc.r.appspot.com/?c=1OTP58gM7pVFikcrhTtIIpgxMGQUZrO4DcI8aOT3gDaU&q=0&r=185cc5b11606fef3&z=1674170798455&o=https%3A%2F%2Fforms.gle%2FgbWdudDjekEW553h7)
 - Fill in this [Google Form for DaanMatch](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
+- D-Lab is holding workshops on a regular basis and these can be found [here](https://dlab.berkeley.edu/training/upcoming-workshops).
