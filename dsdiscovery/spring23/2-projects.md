@@ -55,7 +55,7 @@ Both libraries are free and open-source, and have an active community that provi
 It's worth noting that web scraping can be against the website's term of service and can also cause issues on the website's performance, it's important to check the website's policy and also use the scraping tools in a responsible way.
 ```
 
-```{dropdown} Sites
+```{dropdown} [NGO Directory](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit#gid=0)
 - https://ngodarpan.gov.in/index.php/home/statewise
 - https://ngosindia.com/ngos-of-india/
 - https://give.do/discover/
