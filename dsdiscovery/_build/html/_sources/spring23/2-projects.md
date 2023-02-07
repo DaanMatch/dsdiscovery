@@ -1,4 +1,4 @@
-# Project List
+# Project
 
 To understand the projects we're going to do and choose the one you're interested in, you should first take a look at this webpage. Information is subject to amendments over the semester.
 
@@ -55,52 +55,19 @@ Both libraries are free and open-source, and have an active community that provi
 It's worth noting that web scraping can be against the website's term of service and can also cause issues on the website's performance, it's important to check the website's policy and also use the scraping tools in a responsible way.
 ```
 
-## Indian NGOs Registration Document Library and Categorization
+```{dropdown} [NGO Directory](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit#gid=0)
+- https://ngodarpan.gov.in/index.php/home/statewise
+- https://ngosindia.com/ngos-of-india/
+- https://give.do/discover/
+- https://www.indiangoslist.com
+- https://www.fueladream.com/categories/charity
+- https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedLocations=00india&loadAllResults=true
+- https://www.ketto.org/crowdfunding/fundraisers?query=Ngo
+```
 
-**Project Description:**
+## Testing for Broken links
 
-The goal of this project is to create a comprehensive library of all the registration documents that an NGO in India needs. The project will involve researching and identifying all the registration documents required for an NGO to operate in India and then creating a library that is easily accessible for anyone interested in setting up an NGO.
-
-**Tasks:**
-
-- Research and identify all the registration documents required for an NGO to operate in India
-- Gather information on registration process, required documents, and any other relevant details
-- Create a user-friendly interface for searching and accessing the library
-
-**Technologies:**
-
-- Python
-- Web scraping libraries (Scrapy, Beautiful Soup)
-- SQL
-- PostgreSQL or other database management systems
-
-**Expected Outcomes:**
-
-- A comprehensive library of all the registration documents required for an NGO to operate in India
-- A user-friendly interface for searching and accessing the library
-- Data visualization and reports that provide insights into the Indian NGO sector
-- Continuously updated library with new information and changes in the regulations
-
-Note: The project description is a general guidance, and the specific tasks, technologies and outcomes may vary depending on the scope of the project and the data availability. Additionally, web scraping can be against the website's term of service, it's important to check the website's policy and also use the scraping tools in a responsible way.
-
-NGOs in India are required to register with different government agencies depending on their type and activities. The registration documents needed will vary depending on the specific NGO and the agency with which it is registering. However, here are some of the types of registration documents that are commonly needed for NGOs in India:
-
-- FCRA registration: Foreign Contribution Regulation Act (FCRA) registration is required for NGOs that receive foreign funding. This registration is done with the Ministry of Home Affairs.
-- 12A registration: Section 12A registration is required for NGOs that are eligible for tax exemptions under the Income Tax Act. This registration is done with the Income Tax Department.
-- 80G registration: Section 80G registration is required for NGOs that are eligible for tax exemptions under the Income Tax Act on donations made to them. This registration is done with the Income Tax Department.
-- MSME registration: MSME registration is required for NGOs that are involved in micro, small and medium enterprises. This registration is done with the Ministry of Micro, Small and Medium Enterprises.
-- TAN registration: Tax Deduction and Collection Account Number (TAN) registration is required for NGOs that are required to deduct or collect tax. This registration is done with the Income Tax Department.
-- PAN registration: Permanent Account Number (PAN) registration is required for all organizations, including NGOs, that are required to pay taxes. This registration is done with the Income Tax Department.
-- GST registration: Goods and Services Tax (GST) registration is required for NGOs that are involved in commercial activities and are required to pay GST. This registration is done with the Central Board of Indirect Taxes and Customs.
-- Society registration: Society registration is required for NGOs that are registered as a society. This registration is done with the Registrar of Societies.
-- Trust registration: Trust registration is required for NGOs that are registered as a trust. This registration is done with the Registrar of Trusts.
-
-In India, most of the registration documents for NGOs are considered public information and can be obtained by interested parties through various means.
-
-The registration documents for an NGO that are considered public information are:
-
-FCRA registration: This registration is maintained by the Ministry of Home Affairs and the information on the registration and the annual returns filed by the NGO are available on the Ministry's website for the public to access.
-12A, 80G, MSME, TAN, PAN, GST, Society and Trust registration: These registration details are maintained by the respective government agencies and can be accessed through their websites or by contacting them directly.
-However, some information may be considered confidential and may not be available to the public, such as personal details of the NGO's members or donors. Additionally, certain registration documents like FCRA, may contain information that is not available to the public due to security and privacy concerns.
-
-It's important to note that there may be some variations depending on the state laws and regulations, it's advisable to check with the relevant authorities for the specific registration process and documents availability.
+- Verify the links: First, you will need to verify the links to ensure that they are valid and functional. This can be done by making HTTP requests to each URL and checking the response code. If the response code is in the 200-299 range, it indicates a successful connection, and the link is working. If the response code is in the 400-599 range, it indicates an error, and the link may be broken.
+- Logging: Next, you should log the results of your link verification process. This log should include the URL, the response code, and a timestamp. This will allow you to keep track of the links that are working and those that are not, and to easily identify any changes over time.
+- Testing: You should also set up a process for regularly testing the links to ensure that they remain valid. This can be done using a script that runs at a specified interval and checks the links in your log. If any links are found to be broken, you should be notified so that you can take action.
+- Reporting: Finally, it's important to have a reporting mechanism in place so that you can quickly see the status of all the links and identify any issues. This could be as simple as a spreadsheet or a dashboard that shows the status of each link over time.
