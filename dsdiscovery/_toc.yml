@@ -7,7 +7,7 @@ parts:
   - caption: Spring 2023
     chapters:
     - file: spring23/2-projects.md
-      title: Projects
+      title: Project
   - caption: Spring 2022
     chapters:
     - file: spring22/1-intro-spring2022.md
