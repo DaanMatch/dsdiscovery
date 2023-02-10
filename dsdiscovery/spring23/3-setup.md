@@ -25,3 +25,28 @@ ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
 ```
 ssh -T git@github.com
 ```
+
+## Jupyter on local machine
+
+1. Install Python: Jupyter runs on top of Python, so you need to have Python installed on your machine. You can download and install the latest version of Python from the official website <https://www.python.org/>.
+2. Install Jupyter: After installing Python, you can install Jupyter by running the following command in your terminal or command prompt:
+
+```
+pip install jupyter
+```
+
+3. Launch Jupyter: Once Jupyter is installed, you can launch it by running the following command in your terminal or command prompt:
+
+```
+jupyter notebook
+```
+
+This will start the Jupyter server and open a new web browser window, showing the Jupyter dashboard. From here, you can create new notebooks, open existing notebooks, and interact with your data using Jupyter's powerful interactive environment.
+
+4. Install Additional Packages: Depending on your use case, you may want to install additional packages to extend the functionality of Jupyter. For example, if you plan to work with data, you may want to install packages like NumPy, Pandas, or Matplotlib. You can install these packages by running the following command in your terminal or command prompt:
+
+```
+pip install numpy pandas matplotlib
+```
+
+These are the basic steps to set up Jupyter on your local machine. With Jupyter, you can easily create, edit, and share interactive documents that combine code, text, mathematics, and visualizations.
