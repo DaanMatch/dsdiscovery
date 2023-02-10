@@ -8,6 +8,8 @@ parts:
     chapters:
     - file: spring23/2-projects.md
       title: Project
+    - file: spring23/3-setup.md
+      title: Set Up
   - caption: Spring 2022
     chapters:
     - file: spring22/1-intro-spring2022.md
