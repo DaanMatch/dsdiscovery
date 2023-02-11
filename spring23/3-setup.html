@@ -397,6 +397,16 @@ title="Print to PDF"
    GitHub on local machine
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-on-local-machine">
+   Jupyter on local machine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#posgresql-on-local-machine">
+   PosgreSQL on local machine
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -421,6 +431,16 @@ title="Print to PDF"
    GitHub on local machine
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-on-local-machine">
+   Jupyter on local machine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#posgresql-on-local-machine">
+   PosgreSQL on local machine
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -436,28 +456,62 @@ title="Print to PDF"
 <div class="section" id="github-on-local-machine">
 <h2>GitHub on local machine<a class="headerlink" href="#github-on-local-machine" title="Permalink to this headline">#</a></h2>
 <p>To set up your local machine for GitHub, you need to follow these steps:</p>
-<ol class="simple">
+<ul class="simple">
 <li><p>Install Git: You can download and install Git on your computer from the official website <a class="reference external" href="https://git-scm.com/">https://git-scm.com/</a>.</p></li>
 <li><p>Create a GitHub account: You can create a GitHub account by visiting the website <a class="reference external" href="https://github.com/">https://github.com/</a>.</p></li>
 <li><p>Configure Git: After installation, you need to configure Git with your GitHub account by running the following commands in your terminal or command prompt:</p></li>
-</ol>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Your Name&quot;</span>
 <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;youremail@example.com&quot;</span>
 </pre></div>
 </div>
-<ol class="simple">
+<ul class="simple">
 <li><p>Generate SSH Key: To securely authenticate with GitHub, you need to generate an SSH key. This key will be used to encrypt your data so that only you can access it. Run the following command in your terminal or command prompt:</p></li>
-</ol>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">b</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;youremail@example.com&quot;</span>
 </pre></div>
 </div>
-<ol class="simple">
+<ul class="simple">
 <li><p>Add the SSH Key to GitHub: You need to add the SSH key to your GitHub account. You can do this by visiting the Settings page of your GitHub account, clicking on the “SSH and GPG keys” section, and then clicking on the “New SSH key” button.</p></li>
 <li><p>Test the Connection: Finally, you can test the connection between your local machine and GitHub by running the following command:</p></li>
-</ol>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="jupyter-on-local-machine">
+<h2>Jupyter on local machine<a class="headerlink" href="#jupyter-on-local-machine" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Install Python: Jupyter runs on top of Python, so you need to have Python installed on your machine. You can download and install the latest version of Python from the official website <a class="reference external" href="https://www.python.org/">https://www.python.org/</a>.</p></li>
+<li><p>Install Jupyter: After installing Python, you can install Jupyter by running the following command in your terminal or command prompt:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Launch Jupyter: Once Jupyter is installed, you can launch it by running the following command in your terminal or command prompt:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>This will start the Jupyter server and open a new web browser window, showing the Jupyter dashboard. From here, you can create new notebooks, open existing notebooks, and interact with your data using Jupyter’s powerful interactive environment.</p>
+<ul class="simple">
+<li><p>Install Additional Packages: Depending on your use case, you may want to install additional packages to extend the functionality of Jupyter. For example, if you plan to work with data, you may want to install packages like NumPy, Pandas, or Matplotlib. You can install these packages by running the following command in your terminal or command prompt:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">pandas</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="posgresql-on-local-machine">
+<h2>PosgreSQL on local machine<a class="headerlink" href="#posgresql-on-local-machine" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Install PostgreSQL: You can download and install the latest version of PostgreSQL from the official website <a class="reference external" href="https://www.postgresql.org/">https://www.postgresql.org/</a>. Alternatively, you can install PostgreSQL using a package manager such as apt, yum, or Homebrew, depending on your operating system.</p></li>
+<li><p>Start the PostgreSQL Service: Once you have installed PostgreSQL, you need to start the PostgreSQL service on your machine. On Windows, you can start the service by using the Services Control Panel. On Linux and macOS, you can start the service by using the command line.</p></li>
+<li><p>Configure PostgreSQL: After starting the PostgreSQL service, you need to configure the service by setting up the PostgreSQL data directory and creating a PostgreSQL database cluster. This can be done by using the initdb command.</p></li>
+<li><p>Create a PostgreSQL Database: Once you have configured PostgreSQL, you need to create a database. You can do this by using the createdb command or by connecting to the PostgreSQL server and running SQL commands to create a database.</p></li>
+<li><p>Install a PostgreSQL Client: To interact with the PostgreSQL database, you need to install a PostgreSQL client. There are several PostgreSQL clients available, including the command line client psql, and graphical clients like pgAdmin.</p></li>
+<li><p>Connect to the PostgreSQL Database: Once you have installed a PostgreSQL client, you can connect to the database by specifying the database name, username, and password. You can then run SQL commands to interact with the database.</p></li>
+</ol>
 </div>
 </div>
 
