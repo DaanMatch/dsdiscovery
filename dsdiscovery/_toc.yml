@@ -10,6 +10,8 @@ parts:
       title: Project
     - file: spring23/3-setup.md
       title: Set Up
+    - file: spring23/4-phase1.md
+      title: Phase 1
   - caption: Spring 2022
     chapters:
     - file: spring22/1-intro-spring2022.md
