@@ -25,7 +25,7 @@ parts:
     - file: spring22/5-mapping-w2
       title: Mapping
     - file: spring22/6-database-w2
-      title: Connecting to our dat
+      title: Connecting to our data
     - file: spring22/7-database-w3
       title: Creating a data schema
     - file: spring22/8-database-w4

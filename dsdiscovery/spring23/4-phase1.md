@@ -34,9 +34,8 @@ Annotate the Plot: Highlight important features or patterns in the histogram wit
 
 [Tips on Coding for a Team Project](https://docs.google.com/document/d/19fB5ppzBzdMjTNImoUziohq8d1AB84rDN_DavQGhKAY/edit)\
 
-:::{note} Documentation Example
-:class: dropdownThe note body will be hidden!
-
+``````{note} Documentation Example
+:class: dropdown
 ```
 def predict_and_score(model, X, y):
     """
@@ -69,5 +68,4 @@ def predict_and_score(model, X, y):
 
 predict_and_score(ensemble_model, X_train_scaled, y_train)
 ```
-
-:::
+``````
