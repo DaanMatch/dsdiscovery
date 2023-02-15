@@ -6,6 +6,23 @@ The goal of this exploration is to gain a comprehensive understanding of the dat
 
 ## Exploring the data
 
+1. Review the Data Dictionary: If available, review the data dictionary to understand the meaning of each variable and the values it can take.
+2. Understand the Structure: Understand the structure of the data, including the number of observations, variables, and any missing values.
+3. Identify Data Types: Identify the data types of each variable, such as categorical, numerical, or text data.
+4. Look for Trends and Patterns: Look for trends and patterns in the data, such as outliers, skewness, or unusual observations.
+5. Check for Data Quality Issues: Check for data quality issues, such as missing values, errors, or inconsistencies in the data.
+6. Determine the Purpose of the Analysis: Determine the purpose of the analysis and what insights you hope to gain from the data.
+Clean and Transform the Data: Clean and transform the data as necessary, such as removing missing values, dealing with outliers, or converting text data into numerical representations.
+
+```{note} Data dictionary vs Codebook
+:class: dropdown
+A data dictionary and a codebook are both documents that provide information about a dataset. However, they have slightly different purposes and contents.
+
+A data dictionary is a reference document that provides definitions and descriptions of the variables in a dataset, including their names, data types, units of measurement, and any relevant constraints. It is meant to help users understand the structure and content of the data.
+
+A codebook, on the other hand, is a comprehensive document that provides detailed information about a dataset, including the background and context of the data collection, the data dictionary, the coding and recoding of variables, and any other information that is relevant to the data analysis. It is meant to provide a complete overview of the data and the steps that were taken to prepare it for analysis.
+```
+
 ```{admonition} [Codebook](https://github.com/DaanMatch/Codebook)
 
 <img src="img/codebook_example.png" alt="Codebook Example" class="bg-primary mb-1" width="600px">
@@ -69,3 +86,9 @@ def predict_and_score(model, X, y):
 predict_and_score(ensemble_model, X_train_scaled, y_train)
 ```
 ``````
+
+## TODO
+
+- Fork Codebook Repository
+- Perform EDA and preliminary data cleaning on datasets
+- Create a codebook 
