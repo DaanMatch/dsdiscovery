@@ -145,7 +145,9 @@ VALUES (value1, value2, value3, ...),
 
 ## TODO
 
-- Fork Codebook Repository, may review the work done by previous DS Discovery participants
-- Perform EDA and preliminary data cleaning on datasets
-- Create a data dictionary (we will work towards creating a codebook on the data you will be webscraping)
-- Create SQL version of your datafile
+- [ ]  Fork [Codebook Repository](https://github.com/DaanMatch/Codebook), may review the work done by previous DS Discovery participants
+- [ ] Perform EDA and preliminary data cleaning on datasets
+- [ ] Create a data dictionary (we will work towards creating a codebook on the data you will be webscrapings)
+- [ ] Create SQL version of your data-files
+- [ ] Submit this in a folder with your name by creating a pull request to the Codebook repository
+- [ ] Short presentation to non-technical stakeholder next meeting 5 mins max each person.
