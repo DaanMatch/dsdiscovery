@@ -121,6 +121,27 @@ CREATE TABLE IF NOT EXISTS project
 END;
 ```
 
+Basic syntax:
+
+```
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
+
+```
+INSERT INTO students (id, name, age)
+VALUES (1, 'John Doe', 22);
+```
+
+Insert multiple rows of data into a table at once
+
+```
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...),
+       (value4, value5, value6, ...),
+       (value7, value8, value9, ...),
+       ...;
+``
 
 ## TODO
 
