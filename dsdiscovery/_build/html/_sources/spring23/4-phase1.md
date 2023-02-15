@@ -14,7 +14,7 @@ The goal of this exploration is to gain a comprehensive understanding of the dat
 6. Determine the Purpose of the Analysis: Determine the purpose of the analysis and what insights you hope to gain from the data.
 Clean and Transform the Data: Clean and transform the data as necessary, such as removing missing values, dealing with outliers, or converting text data into numerical representations.
 
-```{note} Data dictionary vs Codebook
+```{admonition} Data dictionary vs Codebook
 :class: dropdown
 A data dictionary and a codebook are both documents that provide information about a dataset. However, they have slightly different purposes and contents.
 
@@ -49,9 +49,9 @@ Annotate the Plot: Highlight important features or patterns in the histogram wit
 
 ## Documentation
 
-[Tips on Coding for a Team Project](https://docs.google.com/document/d/19fB5ppzBzdMjTNImoUziohq8d1AB84rDN_DavQGhKAY/edit)\
+[Tips on Coding for a Team Project](https://docs.google.com/document/d/19fB5ppzBzdMjTNImoUziohq8d1AB84rDN_DavQGhKAY/edit)
 
-``````{note} Documentation Example
+``````{admonition} Documentation Example
 :class: dropdown
 ```
 def predict_and_score(model, X, y):
