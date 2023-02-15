@@ -375,12 +375,51 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploring-the-data">
+   Exploring the data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-on-summarizing-data">
+   Tips on Summarizing data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-blank-table-in-sql">
+   Create blank table in SQL
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -392,6 +431,34 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploring-the-data">
+   Exploring the data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-on-summarizing-data">
+   Tips on Summarizing data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-blank-table-in-sql">
+   Create blank table in SQL
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -403,6 +470,23 @@ title="Print to PDF"
 <h1>Phase 1: Explore the data<a class="headerlink" href="#phase-1-explore-the-data" title="Permalink to this headline">#</a></h1>
 <p>Analyzing NGO data in India in  the existing data sources. This involves reviewing old CSV files and summarizing the content to understand the types of data that are available. This helps gain a deeper understanding of the types of data, common errors, and missing information. Initial cleaning and transformation may be necessary to convert text data into numerical representations, remove stop words, and irrelevant information.</p>
 <p>The goal of this exploration is to gain a comprehensive understanding of the data and domain, providing a solid foundation for subsequent steps in the data analysis process and ensuring the analysis is well-informed and accurate.</p>
+<div class="section" id="exploring-the-data">
+<h2>Exploring the data<a class="headerlink" href="#exploring-the-data" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Review the Data Dictionary: If available, review the data dictionary to understand the meaning of each variable and the values it can take.</p></li>
+<li><p>Understand the Structure: Understand the structure of the data, including the number of observations, variables, and any missing values.</p></li>
+<li><p>Identify Data Types: Identify the data types of each variable, such as categorical, numerical, or text data.</p></li>
+<li><p>Look for Trends and Patterns: Look for trends and patterns in the data, such as outliers, skewness, or unusual observations.</p></li>
+<li><p>Check for Data Quality Issues: Check for data quality issues, such as missing values, errors, or inconsistencies in the data.</p></li>
+<li><p>Determine the Purpose of the Analysis: Determine the purpose of the analysis and what insights you hope to gain from the data.
+Clean and Transform the Data: Clean and transform the data as necessary, such as removing missing values, dealing with outliers, or converting text data into numerical representations.</p></li>
+</ol>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>A data dictionary and a codebook are both documents that provide information about a dataset. However, they have slightly different purposes and contents.</p>
+<p>A data dictionary is a reference document that provides definitions and descriptions of the variables in a dataset, including their names, data types, units of measurement, and any relevant constraints. It is meant to help users understand the structure and content of the data.</p>
+<p>A codebook, on the other hand, is a comprehensive document that provides detailed information about a dataset, including the background and context of the data collection, the data dictionary, the coding and recoding of variables, and any other information that is relevant to the data analysis. It is meant to provide a complete overview of the data and the steps that were taken to prepare it for analysis.</p>
+</div>
 <div class="admonition-codebook-https-github-com-daanmatch-codebook admonition">
 <p class="admonition-title"><a class="reference external" href="https://github.com/DaanMatch/Codebook">Codebook</a></p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/codebook_example.png"><img alt="Codebook Example" class="bg-primary mb-1" src="../_images/codebook_example.png" style="width: 600px;" /></a>
@@ -410,8 +494,11 @@ title="Print to PDF"
 <p>A codebook typically includes information about the variables, such as their names, definitions, measurement scales, missing data codes, and any transformations that have been applied to the data. It may also include information about the data source, the sample size, and any other relevant details about the data.</p>
 <p>The purpose of a codebook is to provide a standardized and consistent reference for the data, making it easier for us to understand and use the data correctly.</p>
 </div>
+</div>
+<div class="section" id="tips-on-summarizing-data">
+<h2>Tips on Summarizing data<a class="headerlink" href="#tips-on-summarizing-data" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
-<p class="admonition-title">This admonition was styled…</p>
+<p class="admonition-title">Guide to Effective Graphs</p>
 <ol class="simple">
 <li><p>Title: Give the histogram a descriptive title that summarizes the main findings of the data. This should be brief, but informative.</p></li>
 <li><p>X and Y Axis Labels: Label the x-axis with the variable that is being plotted, and the y-axis with the frequency or count of the observations.</p></li>
@@ -422,7 +509,105 @@ Annotate the Plot: Highlight important features or patterns in the histogram wit
 <li><p>Style: Choose colors and styles that are easy to read and clearly convey the information.</p></li>
 </ol>
 </div>
-<p><a class="reference external" href="https://docs.google.com/document/d/19fB5ppzBzdMjTNImoUziohq8d1AB84rDN_DavQGhKAY/edit">Tips on Coding for a Team Project</a></p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://docs.google.com/document/d/19fB5ppzBzdMjTNImoUziohq8d1AB84rDN_DavQGhKAY/edit">Tips on Coding for a Team Project</a>\</p>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">predict_and_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that performs classification using model while using ROC AUC as the evaluation metric, </span>
+<span class="sd">    and also using stratified K-fold cross-validation.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    - model: xgboost model</span>
+<span class="sd">    - X: features</span>
+<span class="sd">    - y: labels</span>
+<span class="sd">    - n_splits: number of splits for K-fold cross-validation (default: 5)</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    - mean ROC AUC score from K-fold cross-validation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">true_values</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">RANDOM_STATE</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">val_index</span> <span class="ow">in</span> <span class="n">skf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">val_index</span><span class="p">]</span>
+        <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">val_index</span><span class="p">]</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_val</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">true_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y_val</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
+    <span class="n">true_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">true_values</span><span class="p">)</span>
+    <span class="n">auc_roc</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">true_values</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">auc_roc</span>
+
+<span class="n">predict_and_score</span><span class="p">(</span><span class="n">ensemble_model</span><span class="p">,</span> <span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-blank-table-in-sql">
+<h2>Create blank table in SQL<a class="headerlink" href="#create-blank-table-in-sql" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BEGIN</span><span class="p">;</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">IF</span> <span class="n">NOT</span> <span class="n">EXISTS</span> <span class="n">project</span>
+<span class="p">(</span>
+    <span class="nb">id</span> <span class="n">uuid</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="p">,</span>
+    <span class="n">ngo_id</span> <span class="n">uuid</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">location</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">start_date</span> <span class="n">date</span><span class="p">,</span>
+    <span class="n">end_date</span> <span class="n">date</span><span class="p">,</span>
+    <span class="n">nature_of_intervention</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">project_sector</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">budget</span> <span class="n">numeric</span><span class="p">,</span>
+    <span class="n">external_funding_received</span> <span class="n">numeric</span><span class="p">,</span>
+    <span class="n">no_of_beneficiaries</span> <span class="n">integer</span><span class="p">,</span>
+    <span class="nb">type</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">photos_link</span> <span class="n">text</span><span class="p">,</span>
+    <span class="n">documents_link</span> <span class="n">text</span><span class="p">,</span>
+    <span class="n">description</span> <span class="n">text</span><span class="p">,</span>
+    <span class="n">status</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">manager</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">budget_allocation</span> <span class="n">numeric</span><span class="p">,</span>
+    <span class="n">budget_utlization</span> <span class="n">numeric</span><span class="p">,</span>
+    <span class="n">impact</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">report_link</span> <span class="n">text</span><span class="p">,</span>
+    <span class="n">CONSTRAINT</span> <span class="s2">&quot;Project ID&quot;</span> <span class="n">PRIMARY</span> <span class="n">KEY</span> <span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="n">END</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Basic syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">table_name</span> <span class="p">(</span><span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="n">column3</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">value3</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">students</span> <span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+<span class="n">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John Doe&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Insert multiple rows of data into a table at once</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...),
+       (value4, value5, value6, ...),
+       (value7, value8, value9, ...),
+       ...;
+``
+
+## TODO
+
+- Fork Codebook Repository, may review the work done by previous DS Discovery participants
+- Perform EDA and preliminary data cleaning on datasets
+- Create a data dictionary (we will work towards creating a codebook on the data you will be webscraping)
+- Create SQL version of your datafile
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
