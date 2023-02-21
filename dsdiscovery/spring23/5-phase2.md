@@ -1,6 +1,6 @@
 # Phase 2: Gathering Additional data
 
-Gather additional data through web scraping and automate the process using GitHub Actions. The collected data will be uploaded to pgAdmin, where an entity-relationship (ER) diagram will be created to visualize the structure and relationships of the data. The ER diagram will help identify what's needed for data transformation.
+Gather additional data on this [list of NGO Directories](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing) through web scraping and automate the process using GitHub Actions in the [Webscrape Repository](https://github.com/DaanMatch/webscrape).
 
 ## Webscraping 101
 
@@ -33,7 +33,9 @@ Handle errors and exceptions: Implement error handling and exception handling to
 4. **Save data:** Once the data has been extracted, you can save it to a file or a database. You can use Scrapy's built-in Item Pipeline to process the extracted data and save it to a file or a database.
 5. **Run the spider:** Use the command ```scrapy crawl <spider_name>``` to run the spider and start the web scraping process.
 
+## TODO
 
-[List of NGO Directories](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing)
-
-[List of DaanMatch Web-scraping scripts](https://github.com/DaanMatch/webscrape)
+- [ ]  Fork [Webscrape Repository](https://github.com/DaanMatch/webscrape)
+- [ ] Create a branch using your name
+- [ ] Create a script to webscrape your domain
+- [ ] Review feedback from previous EDA task for [Codebook Repository](https://github.com/DaanMatch/Codebook), and update accordingly
