@@ -12,3 +12,7 @@ Gather additional data through web scraping and automate the process using GitHu
 6. **Store the data:** Save the extracted data in a format such as CSV or JSON, or store it in a database for further analysis.
 Handle errors and exceptions: Implement error handling and exception handling to deal with cases where the website is unavailable, the data is not in the expected format, or the scraping process is interrupted.
 ```
+
+[List of NGO Directories](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing)
+
+[List of DaanMatch Web-scraping scripts](https://github.com/DaanMatch/webscrape)
