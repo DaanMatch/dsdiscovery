@@ -380,12 +380,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#webscraping-101">
+   Webscraping 101
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-with-scrapy">
+   Example with Scrapy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -397,6 +431,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#webscraping-101">
+   Webscraping 101
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-with-scrapy">
+   Example with Scrapy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -406,7 +463,9 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="phase-2-gathering-additional-data">
 <h1>Phase 2: Gathering Additional data<a class="headerlink" href="#phase-2-gathering-additional-data" title="Permalink to this headline">#</a></h1>
-<p>Gather additional data through web scraping and automate the process using GitHub Actions. The collected data will be uploaded to pgAdmin, where an entity-relationship (ER) diagram will be created to visualize the structure and relationships of the data. The ER diagram will help identify what’s needed for data transformation.</p>
+<p>Gather additional data on this <a class="reference external" href="https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing">list of NGO Directories</a> through web scraping and automate the process using GitHub Actions in the <a class="reference external" href="https://github.com/DaanMatch/webscrape">Webscrape Repository</a>.</p>
+<div class="section" id="webscraping-101">
+<h2>Webscraping 101<a class="headerlink" href="#webscraping-101" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">General process for web scraping</p>
 <ol class="simple">
@@ -422,16 +481,35 @@ Handle errors and exceptions: Implement error handling and exception handling to
 <div class="dropdown admonition">
 <p class="admonition-title">Popular Webscraping Libraries</p>
 <ol class="simple">
-<li><p>BeautifulSoup: BeautifulSoup is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.</p></li>
-<li><p>Scrapy: Scrapy is an open-source and collaborative web crawling framework for Python. It is used to extract the data from websites and stores it in structured data format such as CSV, JSON or XML.</p></li>
-<li><p>Selenium: Selenium is a web testing tool that can also be used for web scraping. It can automate web browsers and simulate user interactions with web pages, which can be useful for scraping dynamic websites.</p></li>
-<li><p>Requests: Requests is a simple and elegant Python library used for making HTTP requests to websites. It can be used to download HTML pages or other data from websites, which can then be parsed using other libraries such as BeautifulSoup.</p></li>
-<li><p>Lxml: Lxml is a Python library for processing XML and HTML documents. It provides a fast and efficient way to parse and manipulate XML and HTML data, which can be useful for web scraping.</p></li>
-<li><p>PyQuery: PyQuery is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It provides a jQuery-like syntax for querying and manipulating HTML documents.</p></li>
+<li><p><strong>BeautifulSoup:</strong> BeautifulSoup is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.</p></li>
+<li><p><strong><a class="reference external" href="https://scrapy.org">Scrapy</a>:</strong> Scrapy is an open-source and collaborative web crawling framework for Python. It is used to extract the data from websites and stores it in structured data format such as CSV, JSON or XML.</p></li>
+<li><p><strong>Selenium:</strong> Selenium is a web testing tool that can also be used for web scraping. It can automate web browsers and simulate user interactions with web pages, which can be useful for scraping dynamic websites.</p></li>
+<li><p><strong>Requests:</strong> Requests is a simple and elegant Python library used for making HTTP requests to websites. It can be used to download HTML pages or other data from websites, which can then be parsed using other libraries such as BeautifulSoup.</p></li>
+<li><p><strong>Lxml:</strong> Lxml is a Python library for processing XML and HTML documents. It provides a fast and efficient way to parse and manipulate XML and HTML data, which can be useful for web scraping.</p></li>
+<li><p><strong>PyQuery:</strong> PyQuery is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It provides a jQuery-like syntax for querying and manipulating HTML documents.</p></li>
 </ol>
 </div>
-<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing">List of NGO Directories</a></p>
-<p><a class="reference external" href="https://github.com/DaanMatch/webscrape">List of DaanMatch Web-scraping scripts</a></p>
+</div>
+<div class="section" id="example-with-scrapy">
+<h2>Example with Scrapy<a class="headerlink" href="#example-with-scrapy" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><strong>Create a new Scrapy project:</strong> Use the command ```scrapy startproject &lt;project_name&gt;`` to create a new Scrapy project.</p></li>
+<li><p><strong>Define the spider:</strong> In the newly created project, navigate to the spiders directory and create a new Python file. This file will define the spider. Inside this file, define the name of the spider, the start URLs, and the parse function that will be used to extract data from the website.</p></li>
+<li><p><strong>Extract data:</strong> Inside the parse function, use Scrapy’s selectors to extract the desired data from the website.</p></li>
+<li><p><strong>Save data:</strong> Once the data has been extracted, you can save it to a file or a database. You can use Scrapy’s built-in Item Pipeline to process the extracted data and save it to a file or a database.</p></li>
+<li><p><strong>Run the spider:</strong> Use the command <code class="docutils literal notranslate"><span class="pre">scrapy</span> <span class="pre">crawl</span> <span class="pre">&lt;spider_name&gt;</span></code> to run the spider and start the web scraping process.</p></li>
+</ol>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Fork <a class="reference external" href="https://github.com/DaanMatch/webscrape">Webscrape Repository</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a branch using your name</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a script to web-scraper your domain</p></li>
+<li><p>[ ]</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Review feedback from previous EDA task for <a class="reference external" href="https://github.com/DaanMatch/Codebook">Codebook Repository</a>, and update accordingly</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
