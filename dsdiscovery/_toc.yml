@@ -12,6 +12,8 @@ parts:
       title: Set Up
     - file: spring23/4-phase1.md
       title: Phase 1
+    - file: spring23/5-phase2.md
+      title: Phase 2
   - caption: Spring 2022
     chapters:
     - file: spring22/1-intro-spring2022.md
