@@ -2,6 +2,8 @@
 
 Gather additional data through web scraping and automate the process using GitHub Actions. The collected data will be uploaded to pgAdmin, where an entity-relationship (ER) diagram will be created to visualize the structure and relationships of the data. The ER diagram will help identify what's needed for data transformation.
 
+## Webscraping 101
+
 ```{admonition} General process for web scraping
 :class: tip
 1. **Identify the data to be extracted:** Determine what data you want to extract from the website, such as product prices, reviews, or images.
@@ -22,6 +24,15 @@ Handle errors and exceptions: Implement error handling and exception handling to
 5. **Lxml:** Lxml is a Python library for processing XML and HTML documents. It provides a fast and efficient way to parse and manipulate XML and HTML data, which can be useful for web scraping.
 6. **PyQuery:** PyQuery is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It provides a jQuery-like syntax for querying and manipulating HTML documents.
 ```
+
+## Example with Scrapy
+
+1. **Create a new Scrapy project:** Use the command ```scrapy startproject <project_name>`` to create a new Scrapy project.
+2. **Define the spider:** In the newly created project, navigate to the spiders directory and create a new Python file. This file will define the spider. Inside this file, define the name of the spider, the start URLs, and the parse function that will be used to extract data from the website.
+3. **Extract data:** Inside the parse function, use Scrapy's selectors to extract the desired data from the website.
+4. **Save data:** Once the data has been extracted, you can save it to a file or a database. You can use Scrapy's built-in Item Pipeline to process the extracted data and save it to a file or a database.
+5. **Run the spider:** Use the command ```scrapy crawl <spider_name>``` to run the spider and start the web scraping process.
+
 
 [List of NGO Directories](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing)
 
