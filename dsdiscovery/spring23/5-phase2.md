@@ -13,6 +13,16 @@ Gather additional data through web scraping and automate the process using GitHu
 Handle errors and exceptions: Implement error handling and exception handling to deal with cases where the website is unavailable, the data is not in the expected format, or the scraping process is interrupted.
 ```
 
+```{admonition} Popular Webscraping Libraries
+:class: dropdown
+1. BeautifulSoup: BeautifulSoup is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.
+2. Scrapy: Scrapy is an open-source and collaborative web crawling framework for Python. It is used to extract the data from websites and stores it in structured data format such as CSV, JSON or XML.
+3. Selenium: Selenium is a web testing tool that can also be used for web scraping. It can automate web browsers and simulate user interactions with web pages, which can be useful for scraping dynamic websites.
+4. Requests: Requests is a simple and elegant Python library used for making HTTP requests to websites. It can be used to download HTML pages or other data from websites, which can then be parsed using other libraries such as BeautifulSoup.
+5. Lxml: Lxml is a Python library for processing XML and HTML documents. It provides a fast and efficient way to parse and manipulate XML and HTML data, which can be useful for web scraping.
+6. PyQuery: PyQuery is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It provides a jQuery-like syntax for querying and manipulating HTML documents.
+```
+
 [List of NGO Directories](https://docs.google.com/spreadsheets/d/1Op1zqAMotvDs2e4zHPVHkri0gckNuUXizv_blo1Pcyw/edit?usp=sharing)
 
 [List of DaanMatch Web-scraping scripts](https://github.com/DaanMatch/webscrape)
