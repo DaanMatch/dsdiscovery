@@ -17,15 +17,15 @@ Handle errors and exceptions: Implement error handling and exception handling to
 
 ```{admonition} Popular Webscraping Libraries
 :class: dropdown
-1. **BeautifulSoup:** BeautifulSoup is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.
+1. **[BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/):** BeautifulSoup is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner.
 2. **[Scrapy](https://scrapy.org):** Scrapy is an open-source and collaborative web crawling framework for Python. It is used to extract the data from websites and stores it in structured data format such as CSV, JSON or XML.
-3. **Selenium:** Selenium is a web testing tool that can also be used for web scraping. It can automate web browsers and simulate user interactions with web pages, which can be useful for scraping dynamic websites.
-4. **Requests:** Requests is a simple and elegant Python library used for making HTTP requests to websites. It can be used to download HTML pages or other data from websites, which can then be parsed using other libraries such as BeautifulSoup.
-5. **Lxml:** Lxml is a Python library for processing XML and HTML documents. It provides a fast and efficient way to parse and manipulate XML and HTML data, which can be useful for web scraping.
-6. **PyQuery:** PyQuery is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It provides a jQuery-like syntax for querying and manipulating HTML documents.
+3. **[Selenium](https://www.selenium.dev):** Selenium is a web testing tool that can also be used for web scraping. It can automate web browsers and simulate user interactions with web pages, which can be useful for scraping dynamic websites.
+4. **[Requests](https://pypi.org/project/requests/):** Requests is a simple and elegant Python library used for making HTTP requests to websites. It can be used to download HTML pages or other data from websites, which can then be parsed using other libraries such as BeautifulSoup.
+5. **[Lxml](https://lxml.de):** Lxml is a Python library for processing XML and HTML documents. It provides a fast and efficient way to parse and manipulate XML and HTML data, which can be useful for web scraping.
+6. **[PyQuery](https://pypi.org/project/pyquery/):** PyQuery is a Python library used for web scraping purposes to pull the data out of HTML and XML files. It provides a jQuery-like syntax for querying and manipulating HTML documents.
 ```
 
-## Example with Scrapy
+## [Example](https://github.com/DaanMatch/webscrape) with Scrapy
 
 1. **Create a new Scrapy project:** Use the command ```scrapy startproject <project_name>``` to create a new Scrapy project.
 2. **Define the spider:** In the newly created project, navigate to the spiders directory and create a new Python file. This file will define the spider. Inside this file, define the name of the spider, the start URLs, and the parse function that will be used to extract data from the website.
