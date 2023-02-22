@@ -27,11 +27,35 @@ Handle errors and exceptions: Implement error handling and exception handling to
 
 ## Example with Scrapy
 
-1. **Create a new Scrapy project:** Use the command ```scrapy startproject <project_name>`` to create a new Scrapy project.
+1. **Create a new Scrapy project:** Use the command ```scrapy startproject <project_name>``` to create a new Scrapy project.
 2. **Define the spider:** In the newly created project, navigate to the spiders directory and create a new Python file. This file will define the spider. Inside this file, define the name of the spider, the start URLs, and the parse function that will be used to extract data from the website.
 3. **Extract data:** Inside the parse function, use Scrapy's selectors to extract the desired data from the website.
 4. **Save data:** Once the data has been extracted, you can save it to a file or a database. You can use Scrapy's built-in Item Pipeline to process the extracted data and save it to a file or a database.
 5. **Run the spider:** Use the command ```scrapy crawl <spider_name>``` to run the spider and start the web scraping process.
+
+## Example
+
+To scrape data from <https://www.indiangoslist.com>
+
+- Create a new Scrapy project using the following command in your terminal:
+
+```
+scrapy startproject indiangoslist_scraper
+```
+
+- Create a new spider by running the following command in the terminal:
+
+```
+scrapy genspider indiangoslist_spider indiangoslist.com
+```
+
+- Define the parsing logic for the main page in the parse method of the spider.
+
+Run the spider using the following command in your terminal:
+
+```
+scrapy crawl indiangoslist_spider -o indiangoslist_data.json
+```
 
 ## TODO
 

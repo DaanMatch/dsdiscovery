@@ -413,6 +413,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#todo">
    TODO
   </a>
@@ -444,6 +449,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-with-scrapy">
    Example with Scrapy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -493,12 +503,35 @@ Handle errors and exceptions: Implement error handling and exception handling to
 <div class="section" id="example-with-scrapy">
 <h2>Example with Scrapy<a class="headerlink" href="#example-with-scrapy" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p><strong>Create a new Scrapy project:</strong> Use the command ```scrapy startproject &lt;project_name&gt;`` to create a new Scrapy project.</p></li>
+<li><p><strong>Create a new Scrapy project:</strong> Use the command <code class="docutils literal notranslate"><span class="pre">scrapy</span> <span class="pre">startproject</span> <span class="pre">&lt;project_name&gt;</span></code> to create a new Scrapy project.</p></li>
 <li><p><strong>Define the spider:</strong> In the newly created project, navigate to the spiders directory and create a new Python file. This file will define the spider. Inside this file, define the name of the spider, the start URLs, and the parse function that will be used to extract data from the website.</p></li>
 <li><p><strong>Extract data:</strong> Inside the parse function, use Scrapy’s selectors to extract the desired data from the website.</p></li>
 <li><p><strong>Save data:</strong> Once the data has been extracted, you can save it to a file or a database. You can use Scrapy’s built-in Item Pipeline to process the extracted data and save it to a file or a database.</p></li>
 <li><p><strong>Run the spider:</strong> Use the command <code class="docutils literal notranslate"><span class="pre">scrapy</span> <span class="pre">crawl</span> <span class="pre">&lt;spider_name&gt;</span></code> to run the spider and start the web scraping process.</p></li>
 </ol>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h2>
+<p>To scrape data from <a class="reference external" href="https://www.indiangoslist.com">https://www.indiangoslist.com</a></p>
+<ul class="simple">
+<li><p>Create a new Scrapy project using the following command in your terminal:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">startproject</span> <span class="n">indiangoslist_scraper</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create a new spider by running the following command in the terminal:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">genspider</span> <span class="n">indiangoslist_spider</span> <span class="n">indiangoslist</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Define the parsing logic for the main page in the parse method of the spider.</p></li>
+</ul>
+<p>Run the spider using the following command in your terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scrapy</span> <span class="n">crawl</span> <span class="n">indiangoslist_spider</span> <span class="o">-</span><span class="n">o</span> <span class="n">indiangoslist_data</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">#</a></h2>
