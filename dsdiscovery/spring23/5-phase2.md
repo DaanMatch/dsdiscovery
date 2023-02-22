@@ -38,5 +38,5 @@ Handle errors and exceptions: Implement error handling and exception handling to
 - [ ]  Fork [Webscrape Repository](https://github.com/DaanMatch/webscrape)
 - [ ] Create a branch using your name
 - [ ] Create a script to web-scraper your domain
-- [ ]
+- [ ] Perform EDA on scraped data
 - [ ] Review feedback from previous EDA task for [Codebook Repository](https://github.com/DaanMatch/Codebook), and update accordingly
