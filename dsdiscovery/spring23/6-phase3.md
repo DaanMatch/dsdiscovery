@@ -256,6 +256,80 @@ CREATE TABLE IF NOT EXISTS public.Audio
 [Item Loader Tutorial](https://towardsdatascience.com/a-minimalist-end-to-end-scrapy-tutorial-part-ii-b917509b73f7)
 [Item Loader Documentation](https://docs.scrapy.org/en/latest/topics/loaders.html)
 
+## Connecting to posgreSQL through Python
+
+```
+#!pip install psycopg2-binary
+#!pip install python-dotenv
+
+import pandas as pd
+import numpy as np
+import sys
+import psycopg2
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # load the variables from .env file
+
+password = os.getenv('DB_PASSWORD')
+
+# Connection parameters, yours will be different
+param_dic = {
+    "host"      : "localhost",
+    "database"  : "postgres",
+    "user"      : "postgres",
+    "password"  : password
+}
+def connect(params_dic):
+    """ Connect to the PostgreSQL database server """
+    conn = None
+    try:
+        # connect to the PostgreSQL server
+        print('Connecting to the PostgreSQL database...')
+        conn = psycopg2.connect(**params_dic)
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+        sys.exit(1) 
+    print("Connection successful")
+    return conn
+
+def postgresql_to_dataframe(conn, select_query, column_names):
+    """
+    Tranform a SELECT query into a pandas dataframe
+    """
+    cursor = conn.cursor()
+    try:
+        cursor.execute(select_query)
+    except (Exception, psycopg2.DatabaseError) as error:
+        print("Error: %s" % error)
+        cursor.close()
+        return 1
+    
+    # Naturally we get a list of tupples
+    tupples = cursor.fetchall()
+    cursor.close()
+    
+    # We just need to turn it into a pandas dataframe
+    df = pd.DataFrame(tupples, columns=column_names)
+    return df
+
+    # Connect to the database
+    onn = connect(param_dic)
+    cur = conn.cursor()
+```
+
+To list all your tables inside your database:
+
+```
+cur.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name;")
+rows = cur.fetchall()
+
+for row in rows:
+    print(row[0])
+```
+
+You can read more about this on [How to Execute SQL Queries in Python and R Tutorial](https://www.datacamp.com/tutorial/tutorial-how-to-execute-sql-queries-in-r-and-python).
+
 ## TODO
 
 1. Review Data Schema - Are there any fields that were not captured?
