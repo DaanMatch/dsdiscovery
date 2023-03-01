@@ -12,11 +12,11 @@ If you'd like to develop and/or build the DS Discovery book, you should:
 
 1. Clone this repository
 2. Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-3. (Optional) Edit the books source files located in the `ds_discovery/` directory
-4. Run `jupyter-book clean ds_discovery/` to remove any existing builds
-5. Run `jupyter-book build ds_discovery/`
+3. (Optional) Edit the books source files located in the `dsdiscovery/` directory
+4. Run `jupyter-book clean dsdiscovery/` to remove any existing builds
+5. Run `jupyter-book build dsdiscovery/`
 
-A fully-rendered HTML version of the book will be built in `ds_discovery/_build/html/`.
+A fully-rendered HTML version of the book will be built in `dsdiscovery/_build/html/`.
 
 ### Hosting the book
 

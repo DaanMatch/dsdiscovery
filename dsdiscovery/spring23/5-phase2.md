@@ -64,4 +64,4 @@ scrapy crawl indiangoslist_spider -o indiangoslist_data.json
 - [ ] Create a script to web-scraper your domain
 - [ ] Perform EDA on scraped data
 - [ ] Review feedback from previous EDA task for [Codebook Repository](https://github.com/DaanMatch/Codebook), and update accordingly
-- [ ] Short presentation on your domains, and a walkthough on how you scrapped your data.
+- [ ] Short presentation on your domains, and a walk-through on how you scrapped your data.

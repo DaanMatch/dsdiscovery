@@ -251,8 +251,14 @@ CREATE TABLE IF NOT EXISTS public.Audio
 )
 ```
 
+## Data processing in scrapy
+
+[Item Loader Tutorial](https://towardsdatascience.com/a-minimalist-end-to-end-scrapy-tutorial-part-ii-b917509b73f7)
+[Item Loader Documentation](https://docs.scrapy.org/en/latest/topics/loaders.html)
+
 ## TODO
 
-1. Review Data Schema
+1. Review Data Schema - Are there any fields that were not captured?
 2. Perform EDA on your webscraped data
-3. 
+3. Transform webscraped data to data schema
+4. Submit [Meeting Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
