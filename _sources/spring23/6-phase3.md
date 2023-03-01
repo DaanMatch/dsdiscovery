@@ -259,6 +259,6 @@ CREATE TABLE IF NOT EXISTS public.Audio
 ## TODO
 
 1. Review Data Schema - Are there any fields that were not captured?
-2. Perform EDA on your webscraped data
+2. Perform EDA on your webscraped data, repeat steps in phase 1
 3. Transform webscraped data to data schema
 4. Submit [Meeting Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
