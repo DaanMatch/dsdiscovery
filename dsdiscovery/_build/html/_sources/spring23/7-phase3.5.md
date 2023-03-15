@@ -213,8 +213,28 @@ ITEM_PIPELINES = {
 }
 ```
 
+## SQL Views
+
+CREATE VIEW defines a view of a query. The view is not physically materialized. Instead, the query is run every time the view is 
+referenced in a query.
+
+Create a view consisting of all comedy films example:
+
+```sql
+CREATE VIEW comedies AS
+    SELECT *
+    FROM films
+    WHERE kind = 'Comedy';
+```
+
+<img src="img/pgadmin_sidebar.png" alt="pgadmin_sidebar" class="bg-primary mb-1" width="200px">
+<img src="img/crewteView_1.png" alt="Create View Name" class="bg-primary mb-1" width="200px">
+<img src="img/crewteView_2.png" alt="Create View Sql" class="bg-primary mb-1" width="200px">
+
 ## TODOs
 
 - Update scrapy spider with proper documentation and settings for item and pipeline
 - Pull request to [webscrape](https://github.com/DaanMatch/webscrape) and [codebook](https://github.com/DaanMatch/Codebook) repositories
--  Submit [Meeting Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
+- Submit [Meeting Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
+- Create sql views
+- Example data anlaysis presentations [1](https://drive.google.com/file/d/1JIDnsaLXAx2qnWM86yfrRKLWF5B_ofHU/view), [2](https://github.com/nktnlx/data_analysis_course/blob/main/37_final_project/my_project_slides.pdf)
