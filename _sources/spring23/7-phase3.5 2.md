@@ -1,6 +1,6 @@
 # Phase 3.5: Connecting spider to database
 
-<img src="img/spider_directory.png" alt="Spider directory" class="bg-primary mb-1" width="250px">
+<img src="img/spider_directory.png" alt="Spider directory" class="bg-primary mb-1" width="600px">
 
 ## items.py
 
@@ -212,10 +212,3 @@ ITEM_PIPELINES = {
     'oneIndia_scraper.pipelines.OneindiaScraperPipeline': 300,
 }
 ```
-
-## TODOs
-
-- Update scrapy spider with proper documentation and settings for item and pipeline
-- Pull request to [webscrape](https://github.com/DaanMatch/webscrape) and [codebook](https://github.com/DaanMatch/Codebook) repositories
-- Submit [Meeting Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
-- Example data anlaysis presentations [1](https://drive.google.com/file/d/1JIDnsaLXAx2qnWM86yfrRKLWF5B_ofHU/view), [2](https://github.com/nktnlx/data_analysis_course/blob/main/37_final_project/my_project_slides.pdf)
