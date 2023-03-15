@@ -111,7 +111,9 @@ CREATE TABLE IF NOT EXISTS public.NgoBackground
     Objectives text,
     LegalStatus text,
     AreasOfOperation character varying(255),
-    ActiveStatus text
+    SectorsOfOperation character varying(255),
+    ActiveStatus text,
+    sourceUrl text
 );
 
 CREATE TABLE IF NOT EXISTS public.NgoRegistration

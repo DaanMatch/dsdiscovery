@@ -500,6 +500,7 @@ title="Print to PDF"
 
 <span class="kn">import</span> <span class="nn">scrapy</span>
 <span class="kn">from</span> <span class="nn">scrapy.loader.processors</span> <span class="kn">import</span> <span class="n">MapCompose</span><span class="p">,</span> <span class="n">TakeFirst</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="k">def</span> <span class="nf">convert_date</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="c1"># convert string March 14, 1879 to Python date</span>
@@ -580,7 +581,7 @@ title="Print to PDF"
 <div class="section" id="saving-scraped-data-to-postgres-database-with-scrapy-pipelines">
 <h2>Saving scraped data to postgres database with scrapy pipelines<a class="headerlink" href="#saving-scraped-data-to-postgres-database-with-scrapy-pipelines" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://docs.scrapy.org/en/latest/topics/item-pipeline.html">Item Pipelines</a> are Scrapy’s way of process data scraped by spiders.</p>
-<p>After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through a sequence of steps that can be configured to clean and process the scraped data before ultimately saving it somewhere. Read more [here](<a class="reference external" href="https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-postgres/">Blog tutorial</a>)</p>
+<p>After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through a sequence of steps that can be configured to clean and process the scraped data before ultimately saving it somewhere. <a class="reference external" href="https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-postgres/">Tutorial </a></p>
 <p>You can use Item Pipelines to:</p>
 <ul class="simple">
 <li><p>Clean HTML data</p></li>

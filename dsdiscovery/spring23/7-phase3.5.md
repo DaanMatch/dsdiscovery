@@ -9,6 +9,7 @@
 
 import scrapy
 from scrapy.loader.processors import MapCompose, TakeFirst
+from datetime import datetime
 
 def convert_date(text):
     # convert string March 14, 1879 to Python date
@@ -89,7 +90,7 @@ class OneIndiaNgo(scrapy.Item):
 
 [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html) are Scrapy's way of process data scraped by spiders.
 
-After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through a sequence of steps that can be configured to clean and process the scraped data before ultimately saving it somewhere. Read more [here]([Blog tutorial](https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-postgres/))
+After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through a sequence of steps that can be configured to clean and process the scraped data before ultimately saving it somewhere. [Tutorial ](https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-postgres/)
 
 You can use Item Pipelines to:
 
