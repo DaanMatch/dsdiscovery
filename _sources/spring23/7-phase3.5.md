@@ -228,8 +228,8 @@ CREATE VIEW comedies AS
 ```
 
 <img src="img/pgadmin_sidebar.png" alt="pgadmin_sidebar" class="bg-primary mb-1" width="200px">
-<img src="img/crewteView_1.png" alt="Create View Name" class="bg-primary mb-1" width="200px">
-<img src="img/crewteView_2.png" alt="Create View Sql" class="bg-primary mb-1" width="200px">
+<img src="img/createView_1.png" alt="Create View Name" class="bg-primary mb-1" width="200px">
+<img src="img/createView_2.png" alt="Create View Sql" class="bg-primary mb-1" width="200px">
 
 ## TODOs
 
