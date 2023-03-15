@@ -240,4 +240,4 @@ CREATE VIEW comedies AS
 - Pull request to [webscrape](https://github.com/DaanMatch/webscrape) and [codebook](https://github.com/DaanMatch/Codebook) repositories
 - Submit [Meeting Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link)
 - Create sql views
-- Example data anlaysis presentations [1](https://drive.google.com/file/d/1JIDnsaLXAx2qnWM86yfrRKLWF5B_ofHU/view), [2](https://github.com/nktnlx/data_analysis_course/blob/main/37_final_project/my_project_slides.pdf)
+- Example data analysis presentations [1](https://drive.google.com/file/d/1JIDnsaLXAx2qnWM86yfrRKLWF5B_ofHU/view), [2](https://github.com/nktnlx/data_analysis_course/blob/main/37_final_project/my_project_slides.pdf)
