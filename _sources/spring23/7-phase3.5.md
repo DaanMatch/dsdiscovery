@@ -219,6 +219,8 @@ ITEM_PIPELINES = {
 CREATE VIEW defines a view of a query. The view is not physically materialized. Instead, the query is run every time the view is 
 referenced in a query.
 
+[Purpose of Views](https://www.youtube.com/watch?v=vLLkNI-vkV8&ab_channel=ColtSteele)
+
 Create a view consisting of all comedy films example:
 
 ```sql
