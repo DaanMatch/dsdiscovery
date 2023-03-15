@@ -1,5 +1,7 @@
 # Phase 3.5: Connecting spider to database
 
+<img src="img/spider_directory.png" alt="Spider directory" class="bg-primary mb-1" width="600px">
+
 ## items.py
 
 ```python
