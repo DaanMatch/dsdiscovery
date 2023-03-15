@@ -1,0 +1,801 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase 3.5: Connecting spider to database &#8212; DS Discovery</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "DaanMatch/dsdiscovery");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Welcome to DaanMatch! 😀" href="../spring22/1-intro-spring2022.html" />
+    <link rel="prev" title="Phase 3: Transforming Data" href="6-phase3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DS Discovery</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="1-intro.html">
+                    Welcome to DaanMatch Resource Collection
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Spring 2023
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2-projects.html">
+   Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3-setup.html">
+   Set Up
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4-phase1.html">
+   Phase 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5-phase2.html">
+   Phase 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6-phase3.html">
+   Phase 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Phase 3.5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Spring 2022
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/1-intro-spring2022.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/2-week1.html">
+   Set up
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/3-week2.html">
+   Getting familiar with the data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/4-project-list.html">
+   Project List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/5-mapping-w2.html">
+   Mapping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/6-database-w2.html">
+   Connecting to our data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/7-database-w3.html">
+   Creating a data schema
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/8-database-w4.html">
+   Data transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spring22/9-database-w5.html">
+   EER diagrams
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/DaanMatch/dsdiscovery"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/DaanMatch/dsdiscovery/issues/new?title=Issue%20on%20page%20%2Fspring23/7-phase3.5.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/spring23/7-phase3.5.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#items-py">
+   items.py
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-scraped-data-to-postgres-database-with-scrapy-pipelines">
+   Saving scraped data to postgres database with scrapy pipelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#settings-py">
+   settings.py
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sql-views">
+   SQL Views
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todos">
+   TODOs
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Phase 3.5: Connecting spider to database</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#items-py">
+   items.py
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-scraped-data-to-postgres-database-with-scrapy-pipelines">
+   Saving scraped data to postgres database with scrapy pipelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#settings-py">
+   settings.py
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sql-views">
+   SQL Views
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todos">
+   TODOs
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="phase-3-5-connecting-spider-to-database">
+<h1>Phase 3.5: Connecting spider to database<a class="headerlink" href="#phase-3-5-connecting-spider-to-database" title="Permalink to this headline">#</a></h1>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/spider_directory.png"><img alt="Spider directory" class="bg-primary mb-1" src="../_images/spider_directory.png" style="width: 250px;" /></a>
+<div class="section" id="items-py">
+<h2><a class="reference external" href="http://items.py">items.py</a><a class="headerlink" href="#items-py" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#items.py</span>
+
+<span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">scrapy.loader.processors</span> <span class="kn">import</span> <span class="n">MapCompose</span><span class="p">,</span> <span class="n">TakeFirst</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="k">def</span> <span class="nf">convert_date</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># convert string March 14, 1879 to Python date</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;%B </span><span class="si">%d</span><span class="s1">, %Y&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">remove_newlines</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">replace_newlines</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">OneIndiaNgo</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Item</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to represent an NGO and its information.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        name (scrapy.Field): The name of the NGO.</span>
+<span class="sd">        address (scrapy.Field): The address of the NGO.</span>
+<span class="sd">        city (scrapy.Field): The city where the NGO is located.</span>
+<span class="sd">        state (scrapy.Field): The state where the NGO is located.</span>
+<span class="sd">        telephone (scrapy.Field): The telephone number of the NGO.</span>
+<span class="sd">        mobile (scrapy.Field): The mobile number of the NGO.</span>
+<span class="sd">        website (scrapy.Field): The website of the NGO.</span>
+<span class="sd">        email (scrapy.Field): The email address of the NGO.</span>
+<span class="sd">        ngoType (scrapy.Field): The type of NGO.</span>
+<span class="sd">        regNo (scrapy.Field): The registration number of the NGO.</span>
+<span class="sd">        regDate (scrapy.Field): The registration date of the NGO.</span>
+<span class="sd">        areasOfHelp (scrapy.Field): The development areas where the NGO provides help.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">,</span> <span class="n">remove_newlines</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">title</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">,</span> <span class="n">replace_newlines</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">title</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">city</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">title</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">title</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">telephone</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">mobile</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">website</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">ngoType</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">,</span> <span class="nb">str</span><span class="o">.</span><span class="n">title</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">regNo</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">()</span>
+    <span class="n">regDate</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="n">convert_date</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">areasOfHelp</span> <span class="o">=</span> <span class="n">scrapy</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span>
+        <span class="n">input_processor</span><span class="o">=</span><span class="n">MapCompose</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">),</span>
+        <span class="n">output_processor</span><span class="o">=</span><span class="n">TakeFirst</span><span class="p">()</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saving-scraped-data-to-postgres-database-with-scrapy-pipelines">
+<h2>Saving scraped data to postgres database with scrapy pipelines<a class="headerlink" href="#saving-scraped-data-to-postgres-database-with-scrapy-pipelines" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://docs.scrapy.org/en/latest/topics/item-pipeline.html">Item Pipelines</a> are Scrapy’s way of process data scraped by spiders.</p>
+<p>After an item has been scraped by a spider, it is sent to the Item Pipeline which processes it through a sequence of steps that can be configured to clean and process the scraped data before ultimately saving it somewhere. <a class="reference external" href="https://scrapeops.io/python-scrapy-playbook/scrapy-save-data-postgres/">Tutorial </a></p>
+<p>You can use Item Pipelines to:</p>
+<ul class="simple">
+<li><p>Clean HTML data</p></li>
+<li><p>Validate scraped data</p></li>
+<li><p>Checking for and removing duplicate data</p></li>
+<li><p>Storing the data in database</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#pipelines.py</span>
+
+<span class="kn">from</span> <span class="nn">itemadapter</span> <span class="kn">import</span> <span class="n">ItemAdapter</span>
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">class</span> <span class="nc">OneindiaScraperPipeline</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">load_dotenv</span><span class="p">()</span>  <span class="c1"># load the variables from .env file</span>
+        <span class="n">HOST</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">)</span>
+        <span class="n">DATABASE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">)</span>
+        <span class="n">USER</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">)</span>
+        <span class="n">PASSWORD</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span><span class="p">)</span>
+        <span class="c1"># Connection parameters</span>
+        <span class="n">param_dic</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;host&quot;</span>      <span class="p">:</span> <span class="n">HOST</span><span class="p">,</span>
+            <span class="s2">&quot;database&quot;</span>  <span class="p">:</span> <span class="n">DATABASE</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span>      <span class="p">:</span> <span class="n">USER</span><span class="p">,</span>
+            <span class="s2">&quot;password&quot;</span>  <span class="p">:</span> <span class="n">PASSWORD</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Create/Connect to database</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="o">**</span><span class="n">param_dic</span><span class="p">)</span>
+
+        <span class="c1"># Create cursor, used to execute commands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cur</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+        <span class="c1">## Create quotes table if none exists</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        CREATE TABLE IF NOT EXISTS NgoContact</span>
+<span class="s2">        (</span>
+<span class="s2">        NgoId UUID,</span>
+<span class="s2">        NgoName text,</span>
+<span class="s2">        OrgEmail text,</span>
+<span class="s2">        OfficePhone text,</span>
+<span class="s2">        PrimaryPoc text,</span>
+<span class="s2">        PrimaryPocPhone text,</span>
+<span class="s2">        SecondaryPoc text,</span>
+<span class="s2">        SecondaryPocPhone text,</span>
+<span class="s2">        MailingAddress text,</span>
+<span class="s2">        PhysicalAddress text,</span>
+<span class="s2">        FieldOffices text,</span>
+<span class="s2">        OrgType text,</span>
+<span class="s2">        OrgWebsite character varying(2048),</span>
+<span class="s2">        Facebook character varying(2048),</span>
+<span class="s2">        Twitter character varying(2048),</span>
+<span class="s2">        Instagram character varying(2048),</span>
+<span class="s2">        Youtube character varying(2048),</span>
+<span class="s2">        Whatsapp text,</span>
+<span class="s2">        OtherSocials text,</span>
+<span class="s2">        ExecutiveDirector text,</span>
+<span class="s2">        TechnicalSupport text,</span>
+<span class="s2">        ChairmanName text,</span>
+<span class="s2">        ChairmanMobile text,</span>
+<span class="s2">        ChairmanEmail text,</span>
+<span class="s2">        ViceChairmanName text,</span>
+<span class="s2">        ViceChairmanMobile text,</span>
+<span class="s2">        ViceChairmanEmail text,</span>
+<span class="s2">        SecretaryName text,</span>
+<span class="s2">        SecretaryMobile text,</span>
+<span class="s2">        SecretaryEmail text,</span>
+<span class="s2">        AssistantSecretaryName text,</span>
+<span class="s2">        AssistantSecretaryMobile text,</span>
+<span class="s2">        AssistantSecretaryEmail text</span>
+<span class="s2">        )</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">process_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+
+        <span class="c1"># Check to see if text is already in database </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from NgoContact where ngoName = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],))</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+
+        <span class="c1"># If it is in DB, create log message</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+            <span class="n">spider</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Item already in database: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+
+        <span class="c1"># If ngo isn&#39;t in the DB, insert data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Define insert statement</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot; insert into NgoContact (ngoName, OrgEmail, OfficePhone, OrgWebsite, MailingAddress, PhysicalAddress, OrgType) </span>
+<span class="s2">                                values (</span><span class="si">%s</span><span class="s2">,</span><span class="si">%s</span><span class="s2">,</span><span class="si">%s</span><span class="s2">,</span><span class="si">%s</span><span class="s2">,</span><span class="si">%s</span><span class="s2">,</span><span class="si">%s</span><span class="s2">,</span><span class="si">%s</span><span class="s2">)&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;email&quot;</span><span class="p">],</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;telephone&quot;</span><span class="p">],</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;website&quot;</span><span class="p">],</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;address&quot;</span><span class="p">],</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;address&quot;</span><span class="p">],</span>
+                <span class="n">item</span><span class="p">[</span><span class="s2">&quot;ngoType&quot;</span><span class="p">]</span>
+            <span class="p">))</span>
+
+            <span class="c1">## Execute insert of data into database</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+        
+        <span class="k">return</span> <span class="n">item</span>
+    
+    <span class="k">def</span> <span class="nf">close_spider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+        <span class="c1">## Close cursor &amp; connection to database </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="settings-py">
+<h2><a class="reference external" href="http://settings.py">settings.py</a><a class="headerlink" href="#settings-py" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configure item pipelines</span>
+<span class="c1"># See https://docs.scrapy.org/en/latest/topics/item-pipeline.html</span>
+<span class="n">ITEM_PIPELINES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;oneIndia_scraper.pipelines.OneindiaScraperPipeline&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sql-views">
+<h2>SQL Views<a class="headerlink" href="#sql-views" title="Permalink to this headline">#</a></h2>
+<p>CREATE VIEW defines a view of a query. The view is not physically materialized. Instead, the query is run every time the view is
+referenced in a query.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=vLLkNI-vkV8&amp;ab_channel=ColtSteele">Purpose of Views</a></p>
+<p>Create a view consisting of all comedy films example:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">comedies</span><span class="w"> </span><span class="k">AS</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">films</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Comedy&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/pgadmin_sidebar.png"><img alt="pgadmin_sidebar" class="bg-primary mb-1" src="../_images/pgadmin_sidebar.png" style="width: 200px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/createView_1.png"><img alt="Create View Name" class="bg-primary mb-1" src="../_images/createView_1.png" style="width: 200px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/createView_2.png"><img alt="Create View Sql" class="bg-primary mb-1" src="../_images/createView_2.png" style="width: 200px;" /></a>
+</div>
+<div class="section" id="todos">
+<h2>TODOs<a class="headerlink" href="#todos" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Update scrapy spider with proper documentation and settings for item and pipeline</p></li>
+<li><p>Pull request to <a class="reference external" href="https://github.com/DaanMatch/webscrape">webscrape</a> and <a class="reference external" href="https://github.com/DaanMatch/Codebook">codebook</a> repositories</p></li>
+<li><p>Submit <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSeqIDZzhh5mC1VLh9GpZIyC1YO30XlnoLPgzT8YatSQrTlx4w/viewform?usp=sf_link">Meeting Feedback form</a></p></li>
+<li><p>Create sql views</p></li>
+<li><p>Example data analysis presentations <a class="reference external" href="https://drive.google.com/file/d/1JIDnsaLXAx2qnWM86yfrRKLWF5B_ofHU/view">1</a>, <a class="reference external" href="https://github.com/nktnlx/data_analysis_course/blob/main/37_final_project/my_project_slides.pdf">2</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./spring23"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="6-phase3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Phase 3: Transforming Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../spring22/1-intro-spring2022.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Welcome to DaanMatch! 😀</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Patrick G<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
