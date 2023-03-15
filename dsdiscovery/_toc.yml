@@ -16,6 +16,8 @@ parts:
       title: Phase 2
     - file: spring23/6-phase3.md
       title: Phase 3
+    - file: spring23/7-phase3.5.md
+      title: Phase 3.5
   - caption: Spring 2022
     chapters:
     - file: spring22/1-intro-spring2022.md
