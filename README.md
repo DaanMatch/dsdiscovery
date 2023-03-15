@@ -15,8 +15,11 @@ If you'd like to develop and/or build the DS Discovery book, you should:
 3. (Optional) Edit the books source files located in the `dsdiscovery/` directory
 4. Run `jupyter-book clean dsdiscovery/` to remove any existing builds
 5. Run `jupyter-book build dsdiscovery/`
+6. Run `ghp-import -n -p -f _build/html`
 
 A fully-rendered HTML version of the book will be built in `dsdiscovery/_build/html/`.
+
+Could not import extension myst_nb (exception: cannot import name 'AttrDict' from 'markdown_it.utils' (/Users/simplypatrickg/anaconda3/lib/python3.8/site-packages/markdown_it/utils.py))
 
 ### Hosting the book
 
