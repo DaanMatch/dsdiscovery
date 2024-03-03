@@ -1,0 +1,24 @@
+```bash
+# How to download Jupyter notebooks (on Mac)
+# (Optional)
+# First I’d recommend making a new folder like I just made a folder called “Daanmatch_Internship” in desktop, just to find files and stuff easier
+# And then in terminal you can type in “cd desktop” and then “cd [your folder_name]” to navigate to the folder that you made
+
+# Copy this line to download Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Copy this line to upgrade Homebrew
+brew update && brew upgrade
+
+# Copy this line to download Python
+brew install python3
+
+# Now you can copy this line!
+pip3 install jupyterlab
+
+# This is how you install a Jupyter notebook, copy this line into terminal
+pip install notebook
+
+# This is how you open the notebook, copy this line into terminal!
+jupyter notebook
+```
