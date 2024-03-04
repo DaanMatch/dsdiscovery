@@ -6,6 +6,10 @@ DS Discovery Resource Collection. Click on the badge to be directed to the page.
 
 ## Usage
 
+### Installing Jupyter
+
+For help installing Jupyter, please read the document InstallJupyter. When following the steps in this document, it may be necessary to run the command lines a couple of times, and give the Terminal a few seconds to output its necessary information. Also note: the instructions in the InstallJupyter document are intended to be ran in the 'Terminal' if installing on Mac. The terminal can be found by going to Launchpad and searching Terminal.
+
 ### Building the book
 
 If you'd like to develop and/or build the DS Discovery book, you should:
