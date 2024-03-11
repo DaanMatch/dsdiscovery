@@ -1,5 +1,5 @@
-```bash
 # How to download Jupyter notebooks (on Mac)
+```bash
 # (Optional)
 # First I’d recommend making a new folder like I just made a folder called “Daanmatch_Internship” in desktop, just to find files and stuff easier
 # And then in terminal you can type in “cd desktop” and then “cd [your folder_name]” to navigate to the folder that you made
